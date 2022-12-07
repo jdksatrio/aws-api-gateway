@@ -1,0 +1,10 @@
+#set($inputRoot = $input.path('$'))
+{
+	"id": [
+		#foreach($field in $inputRoot.Items) {
+			"id": "$field.SK_ID_CURR.S",
+			"target": "$field.TARGET.S",
+		}#if($foreach.hasNext),#end
+		#end
+	]
+}
