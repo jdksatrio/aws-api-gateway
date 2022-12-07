@@ -1,0 +1,10 @@
+{
+	"TableName": "submission-file",
+	"PrimaryKey": "SK_ID_CURR",
+	"KeyConditionExpression": "SK_ID_CURR = :v1",
+	"ExpressionAttributeValues": {
+		":v1": {
+			"S": "$input.params('id')"
+		}
+	}
+}
